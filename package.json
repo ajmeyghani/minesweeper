@@ -1,0 +1,25 @@
+{
+  "name": "mine-sweeper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "node_modules/webpack/bin/webpack.js",
+    "dev": "node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "build": "npm run webpack -- -p"
+  },
+  "author": "Amin Meyghani <meyghania@gmail.com> (http://meyghani.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer-loader": "^2.0.0",
+    "css-loader": "^0.16.0",
+    "node-sass": "^3.2.0",
+    "sass-loader": "^2.0.1",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.11.0",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "dependencies": {
+    "knuth-shuffle": "^1.0.1"
+  }
+}

@@ -1,0 +1,169 @@
+@mixin border($size, $top-left-color, $bottom-right-color) {
+  border-top: $size solid $top-left-color;
+  border-right: $size solid $bottom-right-color;
+  border-bottom: $size solid $bottom-right-color;
+  border-left: $size solid $top-left-color;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.minesweeper {
+  font-size: 20px;
+  font-family: sans-serif;
+  background-color: #c0c0c0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.game {
+  padding: 10px;
+  border-top: 7px solid white;
+  border-left: 7px solid white;
+}
+
+.board {
+  @include border(6px, #808080, white);
+  width: 332px;
+  height: 332px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.space {
+  @include border(4px, white, #808080);
+  flex: 0 0 32px;
+  height: 32px;
+}
+
+.controls {
+  @include border(4px, #808080, white);
+
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.number {
+  @include border(3px, #808080, white);
+  background-color: #030303;
+}
+
+.reset {
+  @include border(5px, white, #808080);
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  position: relative;
+  &:active {
+    border-width: 3px;
+  }
+}
+
+
+
+nav button {
+  margin: 6px 10px;
+}
+
+nav button::first-letter {
+  text-decoration: underline;
+}
+
+/* OTHER STYLES */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+}
+
+.title-bar {
+  background-color: #000fbb;
+  display: flex;
+  padding: 4px;
+}
+
+h1 {
+  font-size: 1rem;
+  color: white;
+  flex: 1 1 0;
+  margin: 0;
+  line-height: 28px;
+  position: relative;
+  top: 1px;
+}
+
+.title-bar button {
+  flex: 0 0 auto;
+  @include border(2px, white, black);
+  background-color: #c0c0c0;
+  align-items: center;
+  line-height: 0;
+  margin-left: 6px;
+}
+
+.icon {
+  margin-right: 6px;
+}
+
+.reset img {
+  padding: 2px;
+}
+
+button {
+  outline: none;
+}
+
+
+.space {
+  cursor: pointer;
+}
+.space:active {
+  border: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #000;
+  opacity: 0.5;
+  display: none;
+}
+.msg {
+  padding: 100px;
+  background-color: #FFF;
+  opacity: 0.8;
+  width: 100%;
+  // margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 60px;
+  font-family: arial;
+  opacity: 1;
+  p {
+    margin: 0;
+  }
+}

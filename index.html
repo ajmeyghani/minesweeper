@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>mine sweeper</title>
+</head>
+<body>
+<div class="overlay" id="js-overlay">
+  <div class="msg">
+    <p>Game Over!</p>
+  </div>
+</div>
+  <main>
+    <header class="title-bar">
+      <img class="icon" src="https://dowdcvkfm95kf.cloudfront.net/minesweeper/icon.svg" width="28" height="28">
+      <h1>Minesweeper</h1>
+      <button>
+        <img src="https://dowdcvkfm95kf.cloudfront.net/minesweeper/minimize.svg" width="24" height="24">
+      </button>
+      <button>
+        <img src="https://dowdcvkfm95kf.cloudfront.net/minesweeper/maximize.svg" width="24" height="24">
+      </button>
+      <button>
+        <img src="https://dowdcvkfm95kf.cloudfront.net/minesweeper/close.svg" width="24" height="24">
+      </button>
+    </header>
+    <div class="minesweeper">
+      <nav>
+        <button>Game</button>
+        <button>Help</button>
+      </nav>
+      <section class="game" id="js-game">
+        <div class="controls">
+          <img class="number" src="https://dowdcvkfm95kf.cloudfront.net/minesweeper/numbers10.svg">
+          <button type="button" class="reset" id="js-restart">
+            <img src="/imgs/smiley.svg">
+          </button>
+          <img class="number" src="https://dowdcvkfm95kf.cloudfront.net/minesweeper/numbers29.svg">
+        </div>
+        <!-- <div class="board" id="js-board"></div> -->
+      </div>
+    </div>
+  </main>
+  <script src="bundle.js"></script>
+</body>
+</html>
