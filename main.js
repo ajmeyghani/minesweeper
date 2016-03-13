@@ -59,7 +59,7 @@ var slice = Array.prototype.slice;
 require('./main.scss');
 var shuffle = require('knuth-shuffle').knuthShuffle;
 
-var board = { mines: 50, rows: 10, cols: 10, elms: []};
+var board = { mines: 2, rows: 10, cols: 10, elms: []};
 var gameNode = document.getElementById('js-game');
 
 function overlay (state) {
